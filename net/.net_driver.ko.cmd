@@ -1,0 +1,1 @@
+cmd_/nfsroot_week/code/net/net_driver.ko := arm-linux-ld -EL -r  -T /home/zhiyong/6410/smdk6410_lzy/src/linux3.4.24_ok/scripts/module-common.lds --build-id  -o /nfsroot_week/code/net/net_driver.ko /nfsroot_week/code/net/net_driver.o /nfsroot_week/code/net/net_driver.mod.o

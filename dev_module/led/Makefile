@@ -1,0 +1,16 @@
+LINUX_PATH := /home/zhiyong/6410/smdk6410_lzy/src/linux3.4.24_ok
+
+PREFIX ?= /nfsroot_week
+
+obj-m += bus_test.o
+obj-m += dev_test.o
+obj-m += drv_test.o
+obj-m += drv_test1.o
+
+all:
+	make -C $(LINUX_PATH) M=`pwd` modules
+clean:
+	make -C $(LINUX_PATH) M=`pwd` modules clean
+install:
+	make -C $(LINUX_PATH) M=`pwd` modules_install INSTALL_MOD_PATH=$(PREFIX)
+	
